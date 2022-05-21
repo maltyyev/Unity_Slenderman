@@ -686,5 +686,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 1776148847832142979, guid: 5f778d49dcddb8c45ae8d6ac4f478d74,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776148847832142979, guid: 5f778d49dcddb8c45ae8d6ac4f478d74,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776148847832142979, guid: 5f778d49dcddb8c45ae8d6ac4f478d74,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f778d49dcddb8c45ae8d6ac4f478d74, type: 3}

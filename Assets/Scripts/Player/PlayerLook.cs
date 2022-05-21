@@ -14,17 +14,34 @@ public class PlayerLook : MonoBehaviour
 
     #endregion
 
-    private void LateUpdate()
+    private void Start()
     {
-        _lookVector = _inputManager.GetLookInput();
+        _inputManager.Controls.Player.Look.performed += OnLook;
+        _inputManager.Controls.Player.Look.canceled += OnLook;
+    }
 
-        _xAxis = _lookVector.x * Time.deltaTime * _sensitivity;
-        _yAxis = _lookVector.y * Time.deltaTime * _sensitivity;
+    private void OnDestroy()
+    {
+        _inputManager.Controls.Player.Look.performed -= OnLook;
+        _inputManager.Controls.Player.Look.canceled -= OnLook;
+    }
+
+    private void OnLook(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+    {
+        _lookVector = obj.ReadValue<Vector2>();
+
+        _xAxis = _lookVector.x;
+        _yAxis = _lookVector.y;
 
         _xRotation -= _yAxis;
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
 
         _camera.transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * _xAxis);
+    }
+
+    private void LateUpdate()
+    {
+        
     }
 }
