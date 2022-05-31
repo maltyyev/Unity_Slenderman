@@ -128,7 +128,7 @@ Material:
     - _Metallic2: 0
     - _Metallic3: 0
     - _Mode: 0
-    - _NumLayersCount: 1
+    - _NumLayersCount: 4
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Shininess: 0.064
