@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Activates random papers from <see cref="_papersPlaces"/>. Method activates papers at random places on the scene, therefore <see cref="_papersPlaces"/> length should always be bigger or equal than <see cref="_papersCount"/>
+    /// Activates random papers from <see cref="_papersPlaces"/>. Method activates papers at random places on the scene, therefore <see cref="_papersPlaces"/> array's length should always be bigger or equal than <see cref="_papersCount"/>
     /// </summary>
     private void ActivateRandomPapers()
     {
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     private void ShowVictoryScreen()
     {
-
+        Debug.Log("Victory!!!");
     }
 
     private void ShowDefeatScreen()
