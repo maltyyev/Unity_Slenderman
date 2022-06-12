@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 1776148847832142979}
   - component: {fileID: 1776148847832142978}
   - component: {fileID: 1776148847832142977}
+  - component: {fileID: 3478671297856647711}
   - component: {fileID: 2554605482988113131}
   - component: {fileID: 292436870}
   m_Layer: 0
@@ -257,6 +258,23 @@ MonoBehaviour:
   _inputManager: {fileID: 1776148846297518317}
   _movementSpeed: 10
   _camera: {fileID: 1776148847722198783}
+--- !u!114 &3478671297856647711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776148847832142980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76de4e82641ed514189ba70e95ece0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerCamera: {fileID: 1776148847722198720}
+  _raycastDistance: 4
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!54 &2554605482988113131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -331,7 +349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _papersCount: 2
-  _papersPlaces: []
+  _papersPlaces:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8744631334019718918
 GameObject:
   m_ObjectHideFlags: 0

@@ -1066,17 +1066,17 @@ PrefabInstance:
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
@@ -1152,17 +1152,17 @@ PrefabInstance:
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5819419922895149642, guid: 792edd94950ab4a408d74ac668bd9e90,
         type: 3}
@@ -1259,11 +1259,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerEssentials
-      objectReference: {fileID: 0}
-    - target: {fileID: 6576519888150142464, guid: 5f778d49dcddb8c45ae8d6ac4f478d74,
-        type: 3}
-      propertyPath: _papersPlaces.Array.size
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6576519888150142464, guid: 5f778d49dcddb8c45ae8d6ac4f478d74,
         type: 3}

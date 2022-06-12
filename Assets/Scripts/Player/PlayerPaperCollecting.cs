@@ -1,18 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerPaperCollecting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Camera _playerCamera;
+    [SerializeField] private float _raycastDistance;
+    [SerializeField] private LayerMask _layerMask;
+
+    private Ray _ray;
+    private RaycastHit _raycastHist;
+
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        _ray = _playerCamera.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
+
+        if (Physics.Raycast(_ray, out _raycastHist, _raycastDistance, _layerMask))
+        {
+            _raycastHist.transform.gameObject.SetActive(false);
+        }
     }
 }
