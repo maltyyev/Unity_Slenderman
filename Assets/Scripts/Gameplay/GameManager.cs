@@ -1,13 +1,21 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private byte _papersCount = 8;
     [SerializeField] private GameObject[] _papersPlaces;
 
+    [SerializeField] private Text _papersCountText;
+    [SerializeField, Min(0.1f)] private float _papersCountTextDeactivationTimeout;
+
+    [SerializeField] private string _papersCountTextTemplate = "{0}/{1} записок";
+
     private byte _collectedPapers = 0;
+    private Coroutine _deactivatePapersCountTextCoroutine;
 
     private void Start()
     {
@@ -47,10 +55,29 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void CollectPaper(GameObject paper)
     {
+        if (_deactivatePapersCountTextCoroutine != null)
+            StopCoroutine(_deactivatePapersCountTextCoroutine);
+
         paper.SetActive(false);
         _collectedPapers++;
 
+        ShowPapersCount();
+
         if (_collectedPapers == _papersCount)
             ShowVictoryScreen();
+    }
+
+    private void ShowPapersCount()
+    {
+        _papersCountText.text = string.Format(_papersCountTextTemplate, _collectedPapers, _papersCount);
+        _papersCountText.gameObject.SetActive(true);
+
+        _deactivatePapersCountTextCoroutine = StartCoroutine(DeactivatePapersCountText());
+    }
+
+    private IEnumerator DeactivatePapersCountText()
+    {
+        yield return new WaitForSeconds(_papersCountTextDeactivationTimeout);
+        _papersCountText.gameObject.SetActive(false);
     }
 }
